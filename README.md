@@ -145,6 +145,7 @@ and x,y >= 0
     Maximum Value (Z) = 25.00
     
     Press the enter key to exit...
+    --
     
 
 ## Group members
