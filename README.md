@@ -57,7 +57,7 @@ This program **solves linear optimization problems** by:
 - Basic understanding of LPP formulation.  
 
 ### Steps  
-1. **Clone the Repository**:  
+1. **Clone the Repository**:
 ```
 	git clone https://github.com/your-username/simplex-cpp.git  
 	cd simplex-cpp  
@@ -70,14 +70,14 @@ This program **solves linear optimization problems** by:
 ```
 	./simplex
 ```  
-9. **Input Your Linear Programming Problem (LPP)**
+4. **Input Your Linear Programming Problem (LPP)**
 	- Enter the number of decision variables and constraints.
 	- Provide coefficients for constraints (e.g., 1 1 <= 5 for x + y <= 5).
 	- Specify the objective function coefficients (e.g., 3 2 for Z = 3x + 2y).
 	- Choose maximization or minimization.
-
+---
 ##Sample problem
-###**Baker's Problem** 
+###Baker's Problem
 Maximize profit Z = 3x + 2y with constraints:
 - x + y <= 10 (flour)
 - 2x + y <= 15 (time)
