@@ -1,6 +1,6 @@
 # Group-One-Simplex-Program
-**Name**: Abubakar Abdulkadir Hassan 
-**Matric no.**: U22CS1060 
+**Name**: Abubakar Abdulkadir Hassan </br>
+**Matric no.**: U22CS1060 </br>
 
 # C++ Simplex Algorithm for Linear Programming
 
