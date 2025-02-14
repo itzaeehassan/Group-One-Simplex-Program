@@ -4,87 +4,88 @@
 
 # C++ Simplex Algorithm for Linear Programming
 
-## Introduction  
+## Introduction
 This repository hosts a C++ implementation of the **Simplex Algorithm**, designed to solve Linear Programming Problems (LPPs). This project demonstrates the Simplex Method's ability to optimize real-world decision-making scenarios, such as maximizing profits or minimizing costs under linear constraints. The code provides a modular, educational tool for understanding how the Simplex algorithm navigates high-dimensional feasible regions through iterative pivot operations.
 
 ---
 
-## What It Does  
-This program **solves linear optimization problems** by:  
-- Converting constraints into equations using **slack variables**.  
-- Organizing problem data into a **Simplex tableau**.  
-- Iteratively selecting pivot elements to refine solutions until optimality is reached.  
-- Handling both **maximization** and **minimization** problems.  
+## What It Does
+This program **solves linear optimization problems** by:
+- Converting constraints into equations using **slack variables**.
+- Organizing problem data into a **Simplex tableau**.
+- Iteratively selecting pivot elements to refine solutions until optimality is reached.
+- Handling both **maximization** and **minimization** problems.
 
-**Key Features**:  
-- Accepts user-defined objective functions, constraints, and resource limits.  
-- Displays the Simplex tableau at each iteration for transparency.  
-- Outputs optimal variable values and the objective function result.  
-
----
-
-## How It Works  
-### Algorithm Overview  
-1. **Standard Form Conversion**:  
-   - Constraints are converted to equations using slack variables (e.g., `2x + y <= 5` becomes `2x + y + s = 5`).  
-   - Minimization problems are converted to maximization by negating the objective function.  
-
-2. **Tableau Initialization**:  
-   - Constraints and objective function coefficients are structured into a matrix (tableau).  
-   - Slack variables form the initial basis (identity matrix).  
-
-3. **Iterative Pivot Operations**:  
-   - **Entering Variable**: Column with the largest positive `Cj - Zj` (net improvement per unit).  
-   - **Leaving Variable**: Row with the smallest non-negative ratio of RHS to pivot column value.  
-   - **Pivot**: Normalizes the pivot row and adjusts other rows to update the basis.  
-
-4. **Termination**:  
-   - Stops when all `Cj - Zj <= 0` (optimality) or if the problem is unbounded.  
-
-### Code Structure  
-- **`Simplex` Class**: Manages the tableau, constraints, and pivot logic.  
-- Key Methods:  
-  - `computeCjMinusZj()`: Calculates net improvement for variables.  
-  - `getPivotColumn()` / `getPivotRow()`: Identifies entering/leaving variables.  
-  - `pivot()`: Executes row operations to update the tableau.  
-  - `solve()`: Drives the iterative optimization loop.  
+** Key Features **:
+- Accepts user-defined objective functions, constraints, and resource limits.
+- Displays the Simplex tableau at each iteration for transparency.
+- Outputs optimal variable values and the objective function result.
 
 ---
 
-## How to Use It  
-### Prerequisites  
-- A C++ compiler (e.g., `g++`).  
-- Basic understanding of LPP formulation.  
+## How It Works
+### Algorithm Overview
+1. **Standard Form Conversion**:
+   - Constraints are converted to equations using slack variables (e.g., `2x + y <= 5` becomes `2x + y + s = 5`).
+   - Minimization problems are converted to maximization by negating the objective function.
 
-### Steps  
-1. **Clone the Repository**:
+2. **Tableau Initialization**:
+   - Constraints and objective function coefficients are structured into a matrix (tableau).
+   - Slack variables form the initial basis (identity matrix).
+
+3. **Iterative Pivot Operations**:
+   - **Entering Variable**: Column with the largest positive `Cj - Zj` (net improvement per unit).
+   - **Leaving Variable**: Row with the smallest non-negative ratio of RHS to pivot column value.
+   - **Pivot**: Normalizes the pivot row and adjusts other rows to update the basis.
+
+4. **Termination**:
+   - Stops when all `Cj - Zj <= 0` (optimality) or if the problem is unbounded.
+
+### Code Structure
+- **`Simplex` Class**: Manages the tableau, constraints, and pivot logic.
+- Key Methods:
+  - `computeCjMinusZj()`: Calculates net improvement for variables.
+  - `getPivotColumn()` / `getPivotRow()`: Identifies entering/leaving variables.
+  - `pivot()`: Executes row operations to update the tableau.
+  - `solve()`: Drives the iterative optimization loop.
+
+---
+
+## How to Use It
+### Prerequisites
+- A C++ compiler (e.g., `g++`).
+- Basic understanding of LPP formulation.
+
+### Steps
+
+1. ** Clone the Repository **:
 ```
-	git clone https://github.com/your-username/simplex-cpp.git  
-	cd simplex-cpp  
+	git clone https://github.com/your-username/simplex-cpp.git
+	cd simplex-cpp
 ```
-2. **Compile the Code**
+2. ** Compile the Code **
 ```
-	g++ simplex.cpp -o simplex  
+	g++ simplex.cpp -o simplex
 ```
-3. **Run the Program**
+3. ** Run the Program **
 ```
 	./simplex
 ```  
-4. **Input Your Linear Programming Problem (LPP)**
+4. ** Input Your Linear Programming Problem (LPP) **
 	- Enter the number of decision variables and constraints.
 	- Provide coefficients for constraints (e.g., 1 1 <= 5 for x + y <= 5).
 	- Specify the objective function coefficients (e.g., 3 2 for Z = 3x + 2y).
 	- Choose maximization or minimization.
----
-##Sample problem
-###Baker's Problem
+
+## Sample problem
+### Baker's Problem
 Maximize profit Z = 3x + 2y with constraints:
 - x + y <= 10 (flour)
 - 2x + y <= 15 (time)
 
 and x,y >= 0
 
-###Sample input 
+### Sample input 
     Note:
     This Simplex Algorithm only works for LPPs with <= constraints
     It can't deal with constraints with negative RHS values yet
@@ -103,7 +104,7 @@ and x,y >= 0
     c2: 2
     Is this a maximization (M) or minimization (m) problem? (M/m): M
 
-###Sample output
+### Sample output
     Running Simplex Algorithm...
     
     ** Starting Tableau **
@@ -146,11 +147,11 @@ and x,y >= 0
     Press the enter key to exit...
     
 
-##Group members
+## Group members
 
 - [@U22cs1001](https://github.com/U22cs1001/Group-one-simplex-program "U22cs1001")
 - [@Skidoo123](https://github.com/Skidoo123 "@Skidoo123")
-- [@Eseoghene-ChristineOtuaga](https://github.com/Eseoghene-ChristineOtuaga "@Eseoghene-ChristineOtuaga")
+- [@Eseoghene-ChristineOtuaga](https://github.com/Eseoghene-ChristineOtuaga/Group-One-Simplex-Program-.git "@Eseoghene-ChristineOtuaga")
 - [@itzaeehassan](https://github.com/itzaeehassan/Group-One-Simplex-Program/ "@itzaeehassan")
 - [@Mk30033](https://github.com/Mk30033/Group-One-Simplex-Program "@Mk30033")
 - [@13Eris](https://github.com/13Eris/Group-one-simplex-program- "@13Eris")
