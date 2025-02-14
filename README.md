@@ -16,7 +16,7 @@ This program **solves linear optimization problems** by:
 - Iteratively selecting pivot elements to refine solutions until optimality is reached.
 - Handling both **maximization** and **minimization** problems.
 
-** Key Features **:
+**Key Features**:
 - Accepts user-defined objective functions, constraints, and resource limits.
 - Displays the Simplex tableau at each iteration for transparency.
 - Outputs optimal variable values and the objective function result.
@@ -58,20 +58,20 @@ This program **solves linear optimization problems** by:
 
 ### Steps
 
-1. ** Clone the Repository **:
+1. **Clone the Repository**:
 ```
 	git clone https://github.com/your-username/simplex-cpp.git
 	cd simplex-cpp
 ```
-2. ** Compile the Code **
+2. **Compile the Code**
 ```
 	g++ simplex.cpp -o simplex
 ```
-3. ** Run the Program **
+3. **Run the Program**
 ```
 	./simplex
 ```  
-4. ** Input Your Linear Programming Problem (LPP) **
+4. **Input Your Linear Programming Problem (LPP)**
 	- Enter the number of decision variables and constraints.
 	- Provide coefficients for constraints (e.g., 1 1 <= 5 for x + y <= 5).
 	- Specify the objective function coefficients (e.g., 3 2 for Z = 3x + 2y).
